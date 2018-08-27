@@ -2,7 +2,12 @@
 steps:
     - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
       args:
-          ['build', '-t', 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx', '.']
+          [
+              'build',
+              '-t',
+              'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:v2',
+              '.',
+          ]
     - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
-      args: ['push', 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx']
+      args: ['push', 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:v2']
 # images: ['gcr.io/rebatemango-dev/$REPO_NAME:1.0']
