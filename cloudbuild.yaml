@@ -8,6 +8,6 @@ steps:
               'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:v2',
               '.',
           ]
-    - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
+    - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:v2'
       args: ['push', 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:v2']
 # images: ['gcr.io/rebatemango-dev/$REPO_NAME:1.0']
