@@ -1,7 +1,8 @@
 #step1
 steps:
-    - name: 'gcr.io/rebatemango-dev/github-ppongsak-k8s-centos-phpfm-nginx'
-      args: ['build', '-t', 'gcr.io/rebatemango-dev/$REPO_NAME:1.0', '.']
-    - name: 'gcr.io/rebatemango-dev/github-ppongsak-k8s-centos-phpfm-nginx'
-      args: ['push', 'gcr.io/rebatemango-dev/$REPO_NAME:1.0']
+    - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
+      args:
+          ['build', '-t', 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx', '.']
+    - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
+      args: ['push', 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx']
 # images: ['gcr.io/rebatemango-dev/$REPO_NAME:1.0']
