@@ -11,3 +11,6 @@ steps:
           - 'image'
           - 'deployment/my-deployment'
           - 'my-container=gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
+      env:
+          - 'CLOUDSDK_COMPUTE_ZONE=asia-southeast1-b'
+          - 'CLOUDSDK_CONTAINER_CLUSTER=php-nginx'
