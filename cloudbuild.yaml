@@ -1,4 +1,4 @@
-#step1
+#test build
 steps:
     - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
       args:
