@@ -8,7 +8,7 @@ steps:
     - name: 'gcr.io/cloud-builders/kubectl'
       args:
           - 'set'
-          - 'image'
+          - 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
           - 'deployment/php-nginx'
           - 'php-nginx=gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
       env:
