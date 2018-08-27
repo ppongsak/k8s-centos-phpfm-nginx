@@ -13,3 +13,5 @@ steps:
     #   env:
     #       - 'CLOUDSDK_COMPUTE_ZONE=asia-southeast1-b'
     #       - 'CLOUDSDK_CONTAINER_CLUSTER=rebate-cluster-dev'
+
+images: ['gcr.io/rebatemango-dev/$REPO_NAME']
