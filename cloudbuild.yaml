@@ -1,15 +1,18 @@
 #step1
 steps:
     - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
-      args: ['build', '-t', 'gcr.io/rebatemango-dev/$REPO_NAME', '.']
-    - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
-      args: ['push', 'gcr.io/rebatemango-dev/[IMAGE]']
-    - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
       args:
-          - 'set'
-          - 'image'
-          - 'deployment/my-deployment'
-          - 'my-container=gcr.io/rebatemango-dev/$REPO_NAME:$REVISION_ID'
-      env:
-          - 'CLOUDSDK_COMPUTE_ZONE=asia-southeast1-b'
-          - 'CLOUDSDK_CONTAINER_CLUSTER=rebate-cluster-dev'
+          ['build', '-t', 'gcr.io/rebatemango-dev/$REPO_NAME:$REVISION_ID', '.']
+images:
+    ['gcr.io/rebatemango-dev/$REPO_NAME']
+    # - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
+    #   args: ['push', 'gcr.io/rebatemango-dev/[IMAGE]']
+    # - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
+    #   args:
+    #       - 'set'
+    #       - 'image'
+    #       - 'deployment/my-deployment'
+    #       - 'my-container=gcr.io/rebatemango-dev/$REPO_NAME:$REVISION_ID'
+    #   env:
+    #       - 'CLOUDSDK_COMPUTE_ZONE=asia-southeast1-b'
+    #       - 'CLOUDSDK_CONTAINER_CLUSTER=rebate-cluster-dev'
