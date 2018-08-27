@@ -1,15 +1,6 @@
 #step1
 steps:
-    - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:v1'
-      args: ['pull', 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:v1']
-
-    - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:v2'
+    - name: 'gcr.io/cloud-builders/docker'
       args:
-          [
-              'build',
-              '-t',
-              'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:v2',
-              '.',
-          ]
-      dir: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
+          ['build', '-t', 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx', '.']
 images: ['gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx']
