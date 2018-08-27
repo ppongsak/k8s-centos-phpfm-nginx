@@ -1,6 +1,6 @@
 #step1
 steps:
-    - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
+    - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:v1'
       args:
           [
               'build',
