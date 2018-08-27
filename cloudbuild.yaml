@@ -1,8 +1,7 @@
-#test build
+#test build 2
 steps:
     - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
-      args:
-          ['build', '-t', 'gcr.io/rebatemango-dev/$REPO_NAME:$REVISION_ID', '.']
+      args: ['build', '-t', 'gcr.io/rebatemango-dev/$REPO_NAME:1.0', '.']
 images:
     ['gcr.io/rebatemango-dev/$REPO_NAME']
     # - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
