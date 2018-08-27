@@ -5,7 +5,7 @@ steps:
           [
               'build',
               '-t',
-              'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:v2',
+              'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:v1',
               '.',
           ]
     - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:v2'
