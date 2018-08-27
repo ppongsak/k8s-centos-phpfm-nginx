@@ -1,17 +1,5 @@
-#test build 2
+#step1
 steps:
-    - name: 'gcr.io/rebatemango-dev/github-ppongsak-k8s-centos-phpfm-nginx'
+    - name: 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
       args: ['build', '-t', 'gcr.io/rebatemango-dev/$REPO_NAME', '.']
-    - name: 'gcr.io/rebatemango-dev/github-ppongsak-k8s-centos-phpfm-nginx'
-      args: ['push', 'gcr.io/rebatemango-dev/$REPO_NAME']
-    # - name: 'gcr.io/rebatemango-dev/github-ppongsak-k8s-centos-phpfm-nginx'
-    #   args:
-    #       - 'set'
-    #       - 'image'
-    #       - 'deployment/my-deployment'
-    #       - 'my-container=gcr.io/rebatemango-dev/$REPO_NAME:$REVISION_ID'
-    #   env:
-    #       - 'CLOUDSDK_COMPUTE_ZONE=asia-southeast1-b'
-    #       - 'CLOUDSDK_CONTAINER_CLUSTER=rebate-cluster-dev'
-
-images: ['gcr.io/rebatemango-dev/$REPO_NAME']
+images: ['gcr.io/rebatemango-dev/$REPO_NAME:1.0']
