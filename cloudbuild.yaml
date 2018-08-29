@@ -9,7 +9,7 @@ steps:
           - 'set'
           - 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
           - 'deployment/php-nginx'
-          - 'php-nginx=gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:2.0'
+          - 'php-nginx=gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
       env:
           - 'CLOUDSDK_COMPUTE_ZONE=asia-southeast1-b'
           - 'CLOUDSDK_CONTAINER_CLUSTER=rebate-cluster-dev'
