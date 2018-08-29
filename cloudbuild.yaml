@@ -1,7 +1,7 @@
 steps:
     - name: 'gcr.io/cloud-builders/docker'
       args:
-          ['build', '-t', 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx', '.']
+          ['build', '-t', 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:2.0', '.']
     - name: 'gcr.io/cloud-builders/docker'
       args: ['push', 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:2.0']
     - name: 'gcr.io/cloud-builders/kubectl'
