@@ -1,0 +1,12 @@
+{
+    "authors": [
+        {
+            "name": "Pongsak Prabparn",
+            "email": "pongsak@rebatemango.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "1.0.*"
+    }
+}
