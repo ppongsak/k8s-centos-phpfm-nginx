@@ -4,7 +4,9 @@ MAINTAINER "Pongsak Prabparn" <pongsak@rebatemango.com>
 COPY ./app /var/www/html
 
 # install Composer and plugins
-RUN composer install
+WORKDIR /var/www/html
+
+Run composer install
 
 # Set the port to 80 
 EXPOSE 80
