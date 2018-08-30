@@ -1,6 +1,6 @@
 steps:
     
-    - name: 'ggcr.io/cloud-builders/git'
+    - name: 'gcr.io/cloud-builders/git'
       args: ['pull', 'https://github.com/ppongsak/k8s-centos-phpfm-nginx.git', 'develop']
     # - name: 'gcr.io/cloud-builders/docker'
     #   args: ['pull', 'gcr.io/$PROJECT_ID/k8s-centos-phpfm-nginx']
