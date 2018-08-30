@@ -1,9 +1,9 @@
 steps:
     - name: 'gcr.io/cloud-builders/docker'
       args:
-          ['build', '-t', 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:3.0', '.']
+          ['build', '-t', 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx', '.']
     - name: 'gcr.io/cloud-builders/docker'
-      args: ['push', 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:3.0']
+      args: ['push', 'gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx']
     - name: 'gcr.io/cloud-builders/kubectl'
       args:
           - 'set'
@@ -11,7 +11,7 @@ steps:
           # k8s name
           - 'deployment/php-nginx'
           # container name
-          - 'centos-phpfpm-nginx=gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx:3.0'
+          - 'centos-phpfpm-nginx=gcr.io/rebatemango-dev/k8s-centos-phpfm-nginx'
       env:
           - 'CLOUDSDK_COMPUTE_ZONE=asia-southeast1-b'
           - 'CLOUDSDK_CONTAINER_CLUSTER=rebate-cluster-dev'
