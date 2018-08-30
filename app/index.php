@@ -1,5 +1,5 @@
 <?php
-echo "php k8s deploy with mysql";
+echo "php k8s deploy with mysql!";
 
 echo "<pre>";
 echo "======================================================================";
