@@ -12,9 +12,9 @@ steps:
     #   args: ['pull', 'https://source.developers.google.com/p/$PROJECT_ID/r/github-ppongsak-k8s-centos-phpfm-nginx', 'develop']
     #build image
     - name: 'gcr.io/cloud-builders/docker'
-      args: ['build', '-t', 'gcr.io/$PROJECT_ID/k8s-centos-phpfm-nginx:5.0', '.']
+      args: ['build', '-t', 'gcr.io/$PROJECT_ID/k8s-centos-phpfm-nginx:6.0', '.']
     - name: 'gcr.io/cloud-builders/docker'
-      args: ['push', 'gcr.io/$PROJECT_ID/k8s-centos-phpfm-nginx:5.0']
+      args: ['push', 'gcr.io/$PROJECT_ID/k8s-centos-phpfm-nginx:6.0']
 
     #deploy
     - name: 'gcr.io/cloud-builders/kubectl'
@@ -24,7 +24,7 @@ steps:
           # k8s name
           - 'deployment/php-nginx'
           # container name
-          - 'centos-phpfpm-nginx=gcr.io/$PROJECT_ID/k8s-centos-phpfm-nginx:5.0'
+          - 'centos-phpfpm-nginx=gcr.io/$PROJECT_ID/k8s-centos-phpfm-nginx:6.0'
       env:
           - 'CLOUDSDK_COMPUTE_ZONE=asia-southeast1-b'
           - 'CLOUDSDK_CONTAINER_CLUSTER=rebate-cluster-dev'
