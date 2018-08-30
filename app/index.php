@@ -1,5 +1,5 @@
 <?php
-echo "hello from k8s deployment 2";
+echo "php k8s";
 
 echo "<pre>";
 echo "======================================================================";
