@@ -9,13 +9,13 @@ echo "connecting to mysql";
 echo "<pre></pre>";
 
 
-// $servername = getenv('DEV_DB_HOST');
-// $username = getenv('DB_USER');
-// $password = getenv('DB_PASSWORD');
+$servername = getenv('DEV_DB_HOST');
+$username = getenv('DB_USER');
+$password = getenv('DB_PASSWORD');
 
-$servername = "127.0.0.1";
-$username = "proxyuser";
-$password = "[Z8rLQgTRx7JENB5AxGSTT5HZ";
+// $servername = "127.0.0.1";
+// $username = "proxyuser";
+// $password = "[Z8rLQgTRx7JENB5AxGSTT5HZ";
 
 echo $servername;
 echo "<pre></pre>";
