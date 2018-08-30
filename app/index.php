@@ -1,2 +1,22 @@
 <?php
 echo "hello from k8s deployment 2";
+
+echo "<pre>";
+echo "======================================================================";
+echo "</pre>";
+
+echo "connecting to mysql";
+
+
+$servername = getenv('DEV_DB_HOST');
+$username = getenv('DB_USER');
+$password = getenv('DB_PASSWORD');
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
