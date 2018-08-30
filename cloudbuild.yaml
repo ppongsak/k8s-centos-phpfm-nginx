@@ -5,14 +5,17 @@ steps:
     #   args: ['pull', 'https://github.com/ppongsak/k8s-centos-phpfm-nginx.git', 'develop']
     # - name: 'gcr.io/cloud-builders/docker'
     #   args: ['pull', 'gcr.io/$PROJECT_ID/k8s-centos-phpfm-nginx']
-    - name: gcr.io/cloud-builders/git
+    #git
+    - name: 'gcr.io/cloud-builders/git'
       args: ['fetch', '--unshallow']
     - name: 'gcr.io/cloud-builders/git'
       args: ['pull', 'https://source.developers.google.com/p/$PROJECT_ID/r/github-ppongsak-k8s-centos-phpfm-nginx', 'develop']
+    #build image
     - name: 'gcr.io/cloud-builders/docker'
       args: ['build', '-t', 'gcr.io/$PROJECT_ID/k8s-centos-phpfm-nginx', '.']
     - name: 'gcr.io/cloud-builders/docker'
       args: ['push', 'gcr.io/$PROJECT_ID/k8s-centos-phpfm-nginx:latest']
+    #deploy
     - name: 'gcr.io/cloud-builders/kubectl'
       args:
           - 'set'
